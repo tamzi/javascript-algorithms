@@ -1,8 +1,10 @@
 # Doubly Linked List
 
 _Read this in other languages:_
+[_Русский_](README.ru-RU.md),
 [_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md)
+[_日本語_](README.ja-JP.md),
+[_Português_](README.pt-BR.md)
 
 In computer science, a **doubly linked list** is a linked data structure that 
 consists of a set of sequentially linked records called nodes. Each node contains 
@@ -58,20 +60,20 @@ Remove(head, value)
       head ← ø
       tail ← ø
     else
-      head ← head.Next
+      head ← head.next
       head.previous ← ø
     end if
     return true
   end if
   n ← head.next
-  while n = ø and value = n.value
+  while n != ø and value !== n.value
     n ← n.next
   end while
   if n = tail
     tail ← tail.previous
     tail.next ← ø
     return true
-  else if n = ø
+  else if n != ø
     n.previous.next ← n.next
     n.next.previous ← n.previous
     return true
@@ -87,7 +89,7 @@ ReverseTraversal(tail)
   Pre: tail is the node of the list to traverse
   Post: the list has been traversed in reverse order
   n ← tail
-  while n = ø
+  while n != ø
     yield n.value
     n ← n.previous
   end while
@@ -100,7 +102,7 @@ end Reverse Traversal
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(1)      |
+| O(n)      | O(n)      | O(1)      | O(n)      |
 
 ### Space Complexity
 

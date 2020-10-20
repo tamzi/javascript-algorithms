@@ -54,7 +54,7 @@ Remove(head, value)
       head ← ø
       tail ← ø
     else
-      head ← head.Next
+      head ← head.next
       head.previous ← ø
     end if
     return true
@@ -96,7 +96,7 @@ end Reverse Traversal
 
 | Чтение    | Поиск     | Вставка   | Удаление  |
 | :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(1)      |
+| O(n)      | O(n)      | O(1)      | O(n)      |
 
 ### Пространственная сложность
 

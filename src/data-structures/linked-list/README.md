@@ -7,6 +7,8 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
+[_Türkçe_](README.tr-TR.md),
+[_Українська_](README.uk-UA.md)
 
 In computer science, a **linked list** is a linear collection
 of data elements, in which linear order is not given by
@@ -25,7 +27,9 @@ time is linear (and difficult to pipeline). Faster
 access, such as random access, is not feasible. Arrays
 have better cache locality as compared to linked lists.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudocode for Basic Operations
 
@@ -104,8 +108,9 @@ Remove(head, value)
     if n.next = tail
       tail ← n
       tail.next = null
+    else
+      n.next ← n.next.next
     end if
-    n.next ← n.next.next
     return true
   end if
   return false
